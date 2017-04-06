@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click.prevent="activate">Next</button>
+    <button @click.prevent="activate">Prev</button>
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 export default {
   methods: {
     activate () {
-      this.$store.commit('INCREMENT')
+      let vari = this.$store.commit('DECREASE')
+      console.log(vari)
     }
   }
 }
